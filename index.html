@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/rawline" type="text/css" />
+    
+    <title>Enlighten Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="text-center">Enlighten up!</h2>
+            <h4 class="text-center">A current news source that also provides relevant comic relief.</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-med-6" id="left">
+            <div id="tableContainer" class="container">
+                <div class="panel panel-default-request">
+                    <div class="panel-heading panel-heading-custom-request">
+                        <h3 class="panel-title">Request</h3>
+                    </div>
+                    <div class="panel-body">
+                            <div class="modal fade" id="#myModal">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                  
+                                          </button>
+                                  
+                                        </div>
+                                        <div class="modal-body">
+                                          <p>Please enter a search term, or hit "Suprise me." </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                   
+                                        </div>
+                                      </div>
+                                      <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                  </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="Name"></label>
+                                <input type="text" class="form-control" id="trainName" placeholder="Search for a Topic">
+                                <br>
+                                <button type="button" id="update" class="btn btn-info">I Know What I Want</button>
+                                <button type="button" id="random" class="btn btn-info">Surprise Me</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="tableContainer" class="container">
+                <div class="panel panel-default-reality">
+                    <div class="panel-heading panel-heading-custom-reality">
+                        <h3 class="panel-title">Reality</h3>
+                    </div>
+                    <div class="new"><a class="panel-body" id="newsDrop" target="_blank"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-med-6" id="right">
+            <div id="tableContainer-relief" class="container">
+                <div class="panel-default-relief">
+                    <div class="panel-heading panel-heading-custom-relief">
+                        <h3 class="panel-title">Relief</h3>
+                    </div>
+                    <div class="panel-body-relief">
+                        <div class="container">
+                            <div class="row">
+                                <ul>
+                                    <div class="col-lg-4">
+                                        <div class="card" style="width: 26rem;">
+                                            <div class="card-body">
+                                                <p class="card-title"><b>MEMES</b></p>
+                                                <div class="card-img-bottom" id="memes-display">
+                                                <img class="card-img-bottom" id="memes" src="https://camo.githubusercontent.com/b8b6fb20143f25818214397a4f864f3b74f1602c/68747470733a2f2f6d656d6567656e2e6c696e6b2f62757a7a2f6d656d65732f6d656d65735f657665727977686572652e6a70673f77617465726d61726b3d6e6f6e65"
+                                                    alt="Card image cap" style="width: 26rem;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                                <ul>
+                                    <div class="col-lg-4">
+                                        <div class="card" style="width: 26rem;">
+                                            <div class="card-body">
+                                                <p class="card-title"><b>DAD JOKES</b></p>
+                                                <div class="card-img-bottom" id="dadjoke-display">
+                                                <img class="card-img-bottom" id="dadjoke" src="https://uploads-cdn.thgblogs.com/wp-content/uploads/sites/463/2015/08/26035300/01-dunphy.jpg"
+                                                    alt="Card image cap" style="width: 26rem;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </ul>
+                            <ul>
+                                <div class="col-lg-4">
+                                    <div class="card" style="width: 26rem;">
+                                        <div class="card-body">
+                                            <p class="card-title"><b>GIFS</b></p>
+                                            <div class="card-img-bottom" id="gif-display" style="width: 26rem;"><img class="card-img-bottom" id="gifs" src="https://i.imgur.com/BIT4TTM.gif" 
+                                                alt="Card image cap" style="width: 26rem;"></div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="imageholder">
+            <img class="zenImage" src="zenbud.png" alt="Zen Bud">
+        </div>
+        <div class="copy" id="names">&copy; Ezdehar Jaber, Will Nolan, Nicole Penmer, Kerrick Woyshner</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

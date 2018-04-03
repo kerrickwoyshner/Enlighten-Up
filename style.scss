@@ -1,0 +1,119 @@
+$primary-color:  #5CB7E1;
+$secondary-color: #5C6E7A;
+$third-color: #8D96B7;
+
+@import 'style';
+
+html {
+    height: 100%;
+    box-sizing: border-box;  
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+body{
+    position: relative;
+    margin: 0;
+    background-color: rgb(253, 253, 253);
+    font-family: 'RawlineLight'; 
+    font-weight: bold; 
+    font-style: bold; 
+    background-repeat: none;
+    min-height: 100%;
+}
+.jumbotron{
+    background-color: $primary-color;
+    color:  $secondary-color;
+}
+.card-img-bottom{
+    width: auto; 
+}
+
+#gif-display{
+ width: 26rem; 
+    text-align: center;
+    padding-left: 0;
+}
+.card-title{
+    text-align: center;
+    color: $third-color;
+}
+
+.new{
+    padding: 20px;
+    margin-left: 20px;
+
+}
+
+input.ng-invalid {
+    background-color: $primary-color;
+}
+input.ng-valid {
+    background-color: rgb(198, 242, 248);
+}
+/* unvisited link */
+a:link {
+    color:$secondary-color;
+}
+
+/* visited link */
+a:visited {
+    color: $third-color;
+}
+
+/* mouse over link */
+a:hover {
+    color:$primary-color;
+}
+
+/* selected link */
+a:active {
+    color: $secondary-color;
+}
+
+a:hover span { cursor: pointer }
+
+#dadjoke{
+padding: 20px;
+}
+
+.panel-default > .panel-heading-custom {
+    background: $primary-color;  
+    color: #fff;
+}
+#funny{
+    padding: 30px;
+}
+.footer {
+     position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:$primary-color;
+    text-align: center;
+    margin-top: 5%;
+      }
+    .zenImage{
+    
+        height: 322px;
+        width: 70%; 
+        padding: 0px; 
+        align-content: center;
+        
+    }
+    #names{
+        font-size: 15px; 
+        color: rgb(253, 253, 253);
+        padding: 5px;
+    }
+
+    @media (max-width: 600px) {
+        .element {
+          display: inline-block;
+          width: 100%;
+        }
+      }

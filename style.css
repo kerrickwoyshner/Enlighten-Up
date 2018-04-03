@@ -1,0 +1,93 @@
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    align-content: center;  
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    position: relative;
+    margin: 0;
+    background-color: rgb(253, 253, 253);
+    font-family: 'RawlineLight'; 
+    font-weight: bold; 
+    font-style: bold; 
+    background-repeat: none;
+    min-height: 100%;   
+}
+
+.jumbotron{
+    background-color: #5CB7E1;
+    color:  #5C6E7A;
+}
+
+.card-img-bottom{
+    width: auto; 
+}
+
+#gif-display{
+    width: 26rem; 
+    text-align: center;
+    padding-left: 0;
+}
+
+.card-title{
+    text-align: center;
+    color: #8D96B7;
+}
+
+.new{
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#dadjoke{
+    padding: 20px;
+}
+
+.panel-default > .panel-heading-custom {
+    background: #5CB7E1;  
+    color: #fff;
+}
+
+#funny{
+    padding: 30px;
+}
+
+.footer {
+     position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:#5CB7E1;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.zenImage{
+    
+        height: 200px;
+        width: 50%; 
+        padding: 0px; 
+        align-content: center;       
+}
+
+#names{
+        font-size: 13px; 
+        color: rgb(253, 253, 253);
+        padding: 5px;
+}
+
+@media (max-width: 600px) {
+    .element {
+      display: inline-block;
+      width: 100%;
+    }
+  }
