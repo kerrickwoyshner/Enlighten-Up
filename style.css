@@ -2,9 +2,9 @@
 html {
     height: 100%;
     box-sizing: border-box;
-    align-content: center;  
+    align-content: center;
   }
-  
+
   *,
   *:before,
   *:after {
@@ -14,12 +14,12 @@ html {
 body{
     position: relative;
     margin: 0;
-    background-color: rgb(253, 253, 253);
-    font-family: 'RawlineLight'; 
+    background-color: #de27d7;
+    font-family: 'RawlineLight';
     font-weight: bold; 
-    font-style: bold; 
+    font-style: bold;
     background-repeat: none;
-    min-height: 100%;   
+    min-height: 100%;
 }
 
 .jumbotron{
@@ -28,11 +28,11 @@ body{
 }
 
 .card-img-bottom{
-    width: auto; 
+    width: auto;
 }
 
 #gif-display{
-    width: 26rem; 
+    width: 26rem;
     text-align: center;
     padding-left: 0;
 }
@@ -53,7 +53,7 @@ body{
 }
 
 .panel-default > .panel-heading-custom {
-    background: #5CB7E1;  
+    background: #5CB7E1;
     color: #fff;
 }
 
@@ -72,15 +72,15 @@ body{
 }
 
 .zenImage{
-    
+
         height: 200px;
-        width: 50%; 
-        padding: 0px; 
-        align-content: center;       
+        width: 50%;
+        padding: 0px;
+        align-content: center;
 }
 
 #names{
-        font-size: 13px; 
+        font-size: 13px;
         color: rgb(253, 253, 253);
         padding: 5px;
 }
