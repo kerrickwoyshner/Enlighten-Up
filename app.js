@@ -1,6 +1,7 @@
 // Initializing our application on Firebase
 // ===============================================================================================================================================
 
+
 var config = {
     apiKey: "AIzaSyAA340TsjEt9xMesMiovSSKh2GaWaynRHU",
     authDomain: "enlighten-up-dc253.firebaseapp.com",
@@ -23,7 +24,9 @@ var randNum = []
 // Globalizing the firebase database connection
 var database = firebase.database();
 
+
 // ===============================================================================================================================================
+
 
 //Giphy API Function
 function searchGiphy() {
@@ -50,7 +53,9 @@ function searchGiphy() {
         });
 }
 
+
 // ===============================================================================================================================================
+
 
 // Meme API Function
 function searchMeme() {
@@ -80,7 +85,9 @@ function searchMeme() {
         });
 };
 
+
 // ===============================================================================================================================================
+
 
 // Dad Joke API function
 function searchDad() {
@@ -113,6 +120,9 @@ function searchDad() {
 }
 
 
+// ===============================================================================================================================================
+
+
 // Guardian query URL assembly function
 function buildGuardianURL() {
 
@@ -143,7 +153,14 @@ function generateGuardian() {
             })
         });
 }
-function myFunction() {
+
+
+// ===============================================================================================================================================
+
+
+// Function to generate a random number for when users select the "Surpise Me" search method
+// This number will represent the index of the firebase array that will be used as the application's search term
+function randomNumber() {
     database.ref().once("value", function (snapshot) {
         var x = Math.floor((Math.random() * snapshot.val().Array.length) + 0);
         console.log(x);
@@ -154,13 +171,19 @@ function myFunction() {
     });
 };
 
+
+// ===============================================================================================================================================
+
+
+// When the "Surprise Me" button is clicked, the Firebase array will be set, and a random number will be used to generate a gif, meme, Dad joke, and Guardian article
+// the search term will then be cleared, preparing the application for the next random search
 $("#random").on("click", function (event) {
     event.preventDefault();
     $("#trainName").val("");
     database.ref().set({
         Array: fireBaseArray
     });
-    myFunction();
+    randomNumber();
     searchGiphy();
     searchMeme();
     searchDad();
@@ -168,12 +191,22 @@ $("#random").on("click", function (event) {
     searchTerm = []
 });
 
+
+// ===============================================================================================================================================
+
+
+// When the user makes an entry and clicks the "I Know What I Want" button, the entry is trimmed of any extra spaces
 $("#update").on("click", function (event) {
     event.preventDefault();
     var gif = $("#trainName").val().trim();
+
+    // If no entry is written, a modal will invite the user to type in a search term or click the randomized search button
     if (gif === "") {
         $('#\\#myModal').modal('show');
-    } else {
+    }
+
+    // The search term is then pushed to the Firebase array, and a gif, meme, Dad joke, and Guardian article are selected using the user's search term
+    else {
         searchTerm = gif;
         fireBaseArray.push(gif);
         console.log(fireBaseArray);
@@ -182,6 +215,8 @@ $("#update").on("click", function (event) {
         searchMeme();
         searchDad();
         generateGuardian();
+
+        // After the search is completed, the input area is cleared and ready for the user's next search
         $("#trainName").val("");
     }
 });
