@@ -1,6 +1,6 @@
 //Initialize firebase
 //$(document).ready(function() {
-  var config = {
+var config = {
     apiKey: "AIzaSyAA340TsjEt9xMesMiovSSKh2GaWaynRHU",
     authDomain: "enlighten-up-dc253.firebaseapp.com",
     databaseURL: "https://enlighten-up-dc253.firebaseio.com",
@@ -24,7 +24,7 @@ function searchGiphy() {
         var results = response.data;
         if (results.length === 0) {
             $("#gifs").attr("src", ("https://media0.giphy.com/media/nYogYgSmIJaIo/giphy.gif"));
-          } else {    
+        } else {
             $("#gifs").attr("src", results[0].images.fixed_height.url);
         }
     });
@@ -66,7 +66,8 @@ function searchDad() {
         } else {
             var img = (data.results[0]).id;
             console.log(img);
-            $("#dadjoke").attr("src", ("https://icanhazdadjoke.com/j/" + img + ".png"));
+            // $("#dadjoke").attr("src", ("https://icanhazdadjoke.com/j/" + img + ".png"));
+            $("#dadjoke").attr("src", ("https://icanhazdadjoke.com/j/" + img));
         }
     });
 }
