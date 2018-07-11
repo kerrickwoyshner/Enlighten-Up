@@ -62,7 +62,7 @@ function searchDad() {
         // data: {term: searchTerm}
     }).then(data => {
         if (data.results.length === 0) {
-            $("#dadjoke").attr("src", ("https://icanhazdadjoke.com/j/xHQucUvszd"));
+            $("#dadjoke").attr("src", ("https://icanhazdadjoke.com/j/xHQucUvszd.png"));
         } else {
             var img = (data.results[0]).id;
             console.log(img);
