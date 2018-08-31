@@ -8,6 +8,6 @@ Motivation: We live in chaotic times, where we are all constantly bombarded with
 
 The user has control and can search for a news article based on a user based input topic and then that search term returns a news article - just an unobtrusive, simple link, which gives the user the option to click on the article or not (and then the article opens in a separate tab, allowing the user to maintain their zen experience). The search term then also generates comedic relief or distraction, in the form of a meme, dad joke, and gif.
 
-There is also a random feature where the user can be surprised by a random headline, and then the random headline will still also provide relevant relief.
+The user can also select the "Surprise Me" feature where application returns random headline, and corresponding comic relief based on the headline.
 
 SIMPLY PUT: Get your info and maintain your calm.
